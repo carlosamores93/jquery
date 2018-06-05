@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Curso jQuery de Codigo Facilito</title>
+	</head>
+	<body>
+
+		<h1  class="saludo"> Curso jQuery Cógido Facilito</h1>
+		<p id="carlos"> Carlos Salvador Amores Martínez</p>
+		<div>
+			Camila Leonor Amores Obando	
+		</div>
+
+		<div>
+			Y entonces...	
+		</div>
+
+		<script src="/js/jquery-3.3.1.min.js"></script>
+		<script>
+
+			// Formas de activar el método ready
+			/*
+			$(function(){
+				alert('Metodo ready1');
+			});
+
+			$().ready(function(){
+				alert('Metodo ready2');
+			});
+
+			$(document).ready(function($) {
+				alert('Metodo ready3');
+				alert('Antes de hacer cambios');
+
+				// Selectores basicos
+				$('#carlos').text('Carlos Amores');
+				$('.saludo').css({'background-color': 'red'});
+				$('div').text('KLK MANIN');
+
+			});
+
+			$('h1').ready(function($) {
+				alert('Metodo ready4, H1');
+
+			});
+			*/
+
+			// Manejo de errores
+			// Cuando hemos cargado el documento ... hacemos .. sino...
+			$.when($.ready, $.getScript('js/index.js')).then(function(){
+				console.log('Hemos cargado el archivo');
+			}).catch(function(){
+				console.log('NOOO Hemos cargado el archivo');
+			});
+			
+
+			
+			
+
+
+
+
+		</script>
+
+	</body>
+</html>
