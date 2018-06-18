@@ -6,11 +6,21 @@
 	</head>
 	<body>
 
+		<style type="text/css" media="screen">
+			.ocultar{
+				display: none;
+			}
+		</style>
+
 		<h1  class="saludo"> Curso jQuery Cógido Facilito</h1>
 		<p id="carlos"> Carlos Salvador Amores Martínez</p>
+		<h2 class='saludo'> Klk main </h2>
 		<div>
 			Camila Leonor Amores Obando	
 		</div>
+
+		<p id='parrafo' class='p__parrafo ocultar'> Curso Jqueryyyyyyy</p>
+
 
 		<div>
 			Y entonces...	
@@ -48,12 +58,115 @@
 
 			// Manejo de errores
 			// Cuando hemos cargado el documento ... hacemos .. sino...
+			/*
 			$.when($.ready, $.getScript('js/index.js')).then(function(){
 				console.log('Hemos cargado el archivo');
 			}).catch(function(){
 				console.log('NOOO Hemos cargado el archivo');
 			});
+			*/
+		
+			// Capitulp 6
+			/*
+			var h1 = $('.saludo').html();
+			alert(h1);
+
+			// Attr: obtener y asignar un valor
+			var h1_clase = $('h1').attr('class');
+			alert(h1_clase);
+
+			// Attr: renombramos clase
+			var h1_clase_new = $('h1').attr('class', 'klk-manin');
+			alert(h1_clase_new);
+
+			// Attr: id
+			var h1_id = $('h1').attr('id', 'id-h1');
+			alert(h1_id);
+			*/
+		
+
+			// Capitulo 7 metodos css
+			/*
+			$('.saludo').css({
+				'border': '1px solid black',
+				'color': 'red',
+				'text-align': 'center'
+			});
 			
+			$('div').css({
+				'border': '1px solid blue',
+				'color': 'blue',
+				'text-align': 'center'
+			});
+			*/
+
+
+			// Capitulo 8: Manejo de clases
+			/*
+			$('#parrafo').css({
+				'border': '1px solid black',
+				'color': 'red',
+				'text-align': 'center'
+			});
+
+			// hasClass return bool
+			if($('#parrafo').hasClass('p__parrafoo')){
+				alert('Tiene la clase p__parrafo');
+
+				// Voy a borrar la clase
+				$('#parrafo').removeClass('p__parrafo');
+
+			}else{
+				alert('No tiene la clase');
+				$('#parrafo').addClass('p__parrafo_p')
+			}
+			*/
+		
+			// Capitulo 9: Show and hide
+			// Nos permite mostrar/ocultar elementos
+			/*
+			$('#parrafo').css({
+				'border': '1px solid black',
+				'color': 'red',
+				'text-align': 'center'
+			});
+			if($('#parrafo').hasClass('p__parrafo__')){
+				alert('Tiene la clase p__parrafo');
+
+				// Tiempo que tarda en  mostrar el contenido
+				$('#parrafo').show(3000);
+
+			}else{
+				alert('No tiene la clase, oculto divs');
+				$('div').hide(5000);
+			}
+			*/
+			
+
+			// Capitulo 10: Iterar for foreach
+			$(function(){
+				var numbers = [1,2,3,4,5,6,7,8,9,10];
+
+				$.each(numbers, function(index, val) {
+					 /* iterate through array or object */
+					console.log(index + ':'+  val);
+				});
+
+
+				console.log('FOR!!!');
+				console.log('Size' + numbers.length);
+				for (var i = 0; i < numbers.length; i++) {
+					console.log(numbers[i])
+				}
+			});
+
+
+
+
+
+
+
+
 
 			
 			
