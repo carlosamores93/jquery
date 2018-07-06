@@ -13,6 +13,18 @@
 		</style>
 
 		<h1  class="saludo"> Curso jQuery Cógido Facilito</h1>
+		<input type="text" id="input_text" value="" placeholder="">
+		<br>
+		<label> Numero de pulsaciones del teclado: 
+			<span id='span_pul'> 0 </span> 
+		</label>
+		<br>
+		<label> Numero de letras: 
+			<span id='span_letras'> 0 </span> 
+		</label>
+
+
+
 		<p id="carlos"> Carlos Salvador Amores Martínez</p>
 		<h2 class='saludo'> Klk main </h2>
 		<div>
@@ -25,6 +37,23 @@
 		<div>
 			Y entonces...	
 		</div>
+
+
+		<button type="" id='btnVer'>Ver</button>
+		<button type="" id='btnOcultar'>Ocultar</button>
+
+
+		<img id='flow' src="img/flow.jpg" alt="Ñengo">
+
+
+		<img class='flow' src="img/flow.jpg" alt="Ñengo">
+
+
+
+	<!--
+		<img class='flow_flow1' src="img/flow.jpg" alt="Ñengo">
+		<img class='flow_flow2' src="img/bsc.png" alt="Ñengo">
+	-->
 
 		<script src="/js/jquery-3.3.1.min.js"></script>
 		<script>
@@ -144,11 +173,12 @@
 			
 
 			// Capitulo 10: Iterar for foreach
+			/*
 			$(function(){
 				var numbers = [1,2,3,4,5,6,7,8,9,10];
 
 				$.each(numbers, function(index, val) {
-					 /* iterate through array or object */
+					 // iterate through array or object
 					console.log(index + ':'+  val);
 				});
 
@@ -159,6 +189,153 @@
 					console.log(numbers[i])
 				}
 			});
+			*/
+		
+			// Capitulo 11: iterar elementos con for of
+			/*
+			$(function(){
+				var numbers = [1,2,3,4,5,6,7,8,9,10];
+				var num;
+				for(let num of numbers) {
+					console.log(num);
+				}
+				console.log("*****************************");
+				var klks = [{
+					'colors':[
+						{
+							'color' : 'red',
+							'hexValue' : '#f00'
+						},
+						{
+							'color' : 'green',
+							'hexValue' : '#0f0'
+						},
+						{
+							'color' : 'blue',
+							'hexValue' : '#00f'
+						}
+					]
+				}];
+				var klk;
+				for(let klk of klks) {
+					console.log(klk);
+					console.log(klk.colors[0].color);
+				}
+			});
+			*/
+		
+			// Capitulo 12: Metodo attr y .click :)
+			/*
+			$(function(){
+				$('#flow').click(function(event) {
+					$('#flow').attr({
+						width: '300'
+					});
+
+				});
+
+
+				$('.flow').click(function(event) {
+					$('.flow').attr({
+						src: 'img/bsc.png'
+					});
+
+				});
+
+
+				$('.flow_flow1').click(function(event) {
+					var uno = $('.flow_flow1').attr('src');
+					//alert(uno);
+					var dos = $('.flow_flow2').attr('src');
+					$('.flow_flow2').attr({
+						src: uno
+					});
+					$('.flow_flow1').attr({
+						src: dos
+					});
+				});
+
+				$('.flow_flow2').click(function(event) {
+					var uno = $('.flow_flow1').attr('src');
+					//alert(uno);
+					var dos = $('.flow_flow2').attr('src');
+					$('.flow_flow1').attr({
+						src: dos
+					});
+					$('.flow_flow2').attr({
+						src: uno
+					});
+				});
+			});
+			*/
+		
+			// Capitulo 13: Dimensiones
+			/*
+			$(function(){
+				$('#flow').click(function(event) {
+					var h = $('#flow').height();
+					alert(h);
+					$('#flow').width(250).height(600);
+				});
+			});
+			*/
+		
+
+
+			// Capitulo 14: Efectos, ocultar, mostrar
+			/*
+			$(function(){
+				$('#btnVer').click(function(event) {
+					//$('#flow').slideDown();
+					$('#flow').animate({
+						height: 900
+					});
+					//$('.flow').slideDown(5000);
+					$('.flow').fadeIn(5000);
+					
+				});
+
+				$('#btnOcultar').click(function(event) {
+					//$('#flow').slideUp();
+					//$('.flow').slideUp(5000);
+					$('.flow').fadeOut(5000);
+
+					$('#flow').animate({
+						height: 300
+					}, 5000);
+					
+				});
+
+			});
+			*/
+			
+			// Capitlo 15: Eventos de teclado
+			$(function(){
+				$('#input_text').keydown(function(event) {
+					$('#input_text').css('background-color', 'red');
+					$('#span_pul').text(i+=1);
+				});
+				var i = 0;
+				$('#input_text').keypress(function(event) {
+					$('span_pul').text(i+=1);
+				});
+
+				$('#input_text').keyup(function(event) {
+					$('#input_text').css('background-color', 'white');
+
+					var input = $('#input_text').val();
+					//alert(input);
+					var len = input.length;
+					//alert(len);
+					$('#span_letras').text(len);
+				});
+
+
+
+			});
+
+
+
 
 
 
