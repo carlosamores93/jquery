@@ -2,12 +2,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Curso jQuery de Codigo Facilito</title>
+		<title>jQuery</title>
 	</head>
 	<body id='body__id'>
-
-		
-		
 
 		<style type="text/css" media="screen">
 			.ocultar{
@@ -22,37 +19,50 @@
 			}
 		</style>
 
-		<h1  class="saludo"> Curso jQuery Cógido Facilito</h1>
+		<center id='center__id__video'>
+			<h1>jQuery</h1>
+		</center>
+		<hr>
 
+		<center >
+			<h2> 1. Activacíon del método ready</h2>
+			<p id="carlos_amores"> Carlos Salvador Amores Martínez</p>
+			<h2 class='saludo_klk'> Klk manin </h2>
+			<div class='camila_amores'>
+				Camila Leonor Amores Obando
+			</div>
+		</center>
+		<hr>
 
 		<center id='center__id__video'>
-			<iframe class='video_scroll' id='video_video' width="560" height="315" src="https://www.youtube.com/embed/HjjtM3EV0Jk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+			<h2 class="saludo"> 2. Video scroll</h2>
+			<iframe class='video_scroll' id='video_video' width="560" height="315" src="https://www.youtube.com/embed/Ro18BjrfFg4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<br>
 			<br>
 			<br>
 			<input type="submit" value="Borrar" id='video_del' class='video_del'>
-
 		</center>
+		<hr>
+
+		<center>
+			<h2> 6. Attr(get/set), rename(class/id)</h2>
+			<p class='p_carlos_amores'> Carlos Amores</p>
+			<span class='span_salvador'>Salvador Martinez</span>
+			<p class='csam'>Salvador Martinez</p>
+		</center>
+		<hr>
 
 
-
-
-
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-
-		
-		<center> 
+		<center>
+			<h2> 18. Método animate</h2>
+			<p> Vamos a mover el cubo negro</p>
 			<button id="left" > Izquierda</button>
 			<button id="right" > Derecha </button>
 			<button id="up" > Arriba </button>
 			<button id="down" > Abajo </button>
-			<div class='cubo'></div> 
+			<div class='cubo'></div>
 		</center>
+		<hr>
 
 
 		<!--
@@ -70,12 +80,12 @@
 
 		<input type="text" id="input_text" value="" placeholder="">
 		<br>
-		<label> Numero de pulsaciones del teclado: 
-			<span id='span_pul'> 0 </span> 
+		<label> Numero de pulsaciones del teclado:
+			<span id='span_pul'> 0 </span>
 		</label>
 		<br>
-		<label> Numero de letras: 
-			<span id='span_letras'> 0 </span> 
+		<label> Numero de letras:
+			<span id='span_letras'> 0 </span>
 		</label>
 
 
@@ -83,17 +93,13 @@
 
 
 
-		<p id="carlos"> Carlos Salvador Amores Martínez</p>
-		<h2 class='saludo'> Klk main </h2>
-		<div>
-			Camila Leonor Amores Obando	
-		</div>
+
 
 		<p id='parrafo' class='p__parrafo ocultar'> Curso Jqueryyyyyyy</p>
 
 
 		<div>
-			Y entonces...	
+			Y entonces...
 		</div>
 
 
@@ -108,7 +114,7 @@
 
 
 
-	
+
 		<img class='flow_flow1' src="img/flow.jpg" alt="Ñengo">
 		<img class='flow_flow2' src="img/bsc.png" alt="Ñengo">
 
@@ -131,7 +137,7 @@
 
 
 
-		
+
 
 
 
@@ -167,7 +173,7 @@
 
 
 
-		
+
 
 		<center>
 			<h5 id='h5__23'> 23.- Curso jQuery - Padres, Hijos, Hermanos de Elementos </h5>
@@ -179,7 +185,7 @@
 				<li> Elemento 4</li>
 			</ol>
 
-			
+
 
 		</center>
 
@@ -194,7 +200,7 @@
 				<li> Elemento 4</li>
 			</ol>
 
-			<button id="btn_exe_create"> Create </button> 
+			<button id="btn_exe_create"> Create </button>
 		</center>
 
 
@@ -240,16 +246,36 @@
 
 
 
-		<script src="/js/jquery-3.3.1.min.js"></script>
-		<script src="/js/videoscroll.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/videoscroll.js"></script>
 		<!--
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-		-->	
+		-->
 		<script src='https://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js'></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 		<script>
+			// 1. Formas de activar el método ready
+			$(function(){
+				alert('Metodo ready1');
+			});
+			$().ready(function(){
+				alert('Metodo ready2');
+			});
+			$(document).ready(function($) {
+				alert('Metodo ready3');
+				alert('Antes de hacer cambios');
+				// Selectores basicos
+				$('#carlos_amores').text('Carlos Amores');
+				$('.saludo_klk').css({'background-color': 'red'});
+				$('div.camila_amores').text('CAMILA LEONOR AMORES OBANDO');
+			});
+			$('h1').ready(function($) {
+				alert('Metodo ready4, H1');
+			});
 
 
+
+			// 2. Videoscroll
 			$(function(){
 				$('.video_scroll').vscroll();
 				$('.video_del').eliminarVideo();
@@ -261,81 +287,53 @@
 
 			});
 
-			// Formas de activar el método ready
-			/*
-			$(function(){
-				alert('Metodo ready1');
-			});
 
-			$().ready(function(){
-				alert('Metodo ready2');
-			});
-
-			$(document).ready(function($) {
-				alert('Metodo ready3');
-				alert('Antes de hacer cambios');
-
-				// Selectores basicos
-				$('#carlos').text('Carlos Amores');
-				$('.saludo').css({'background-color': 'red'});
-				$('div').text('KLK MANIN');
-
-			});
-
-			$('h1').ready(function($) {
-				alert('Metodo ready4, H1');
-
-			});
-			*/
 
 			// Manejo de errores
 			// Cuando hemos cargado el documento ... hacemos .. sino...
-			/*
 			$.when($.ready, $.getScript('js/index.js')).then(function(){
 				console.log('Hemos cargado el archivo');
 			}).catch(function(){
 				console.log('NOOO Hemos cargado el archivo');
 			});
-			*/
-		
-			// Capitulp 6
-			/*
-			var h1 = $('.saludo').html();
-			alert(h1);
 
+
+			// Capitulo 6
+			console.log('CAP 6 INI');
+			var p_carlos = $('.p_carlos_amores').html();
+			console.log(p_carlos);
 			// Attr: obtener y asignar un valor
-			var h1_clase = $('h1').attr('class');
-			alert(h1_clase);
-
+			var class_attr = $('.span_salvador').attr('class');
+			console.log(class_attr);
 			// Attr: renombramos clase
-			var h1_clase_new = $('h1').attr('class', 'klk-manin');
-			alert(h1_clase_new);
-
+			var class_attr_new = $('.span_salvador').attr('class', 'salvador_carlos');
+			console.log(class_attr_new);
 			// Attr: id
-			var h1_id = $('h1').attr('id', 'id-h1');
-			alert(h1_id);
-			*/
-		
+			var new_id = $('p.csam').attr('id', 'csam_id');
+			console.log(new_id);
+			console.log('CAP 6 FIN');
+
+
 
 			// Capitulo 7 metodos css
-			/*
-			$('.saludo').css({
+
+			/*$('.saludo').css({
 				'border': '1px solid black',
 				'color': 'red',
 				'text-align': 'center'
 			});
-			
+
 			$('div').css({
 				'border': '1px solid blue',
 				'color': 'blue',
 				'text-align': 'center'
-			});
-			*/
+			});*/
+
 
 
 			// Capitulo 8: Manejo de clases
-			/*
-			$('#parrafo').css({
+
+			/*$('#parrafo').css({
 				'border': '1px solid black',
 				'color': 'red',
 				'text-align': 'center'
@@ -351,13 +349,13 @@
 			}else{
 				alert('No tiene la clase');
 				$('#parrafo').addClass('p__parrafo_p')
-			}
-			*/
-		
+			}*/
+
+
 			// Capitulo 9: Show and hide
 			// Nos permite mostrar/ocultar elementos
-			/*
-			$('#parrafo').css({
+
+			/*$('#parrafo').css({
 				'border': '1px solid black',
 				'color': 'red',
 				'text-align': 'center'
@@ -371,13 +369,13 @@
 			}else{
 				alert('No tiene la clase, oculto divs');
 				$('div').hide(5000);
-			}
-			*/
-			
+			}*/
+
+
 
 			// Capitulo 10: Iterar for foreach
-			/*
-			$(function(){
+
+			/*$(function(){
 				var numbers = [1,2,3,4,5,6,7,8,9,10];
 
 				$.each(numbers, function(index, val) {
@@ -391,12 +389,12 @@
 				for (var i = 0; i < numbers.length; i++) {
 					console.log(numbers[i])
 				}
-			});
-			*/
-		
+			});*/
+
+
 			// Capitulo 11: iterar elementos con for of
-			/*
-			$(function(){
+
+			/*$(function(){
 				var numbers = [1,2,3,4,5,6,7,8,9,10];
 				var num;
 				for(let num of numbers) {
@@ -424,12 +422,12 @@
 					console.log(klk);
 					console.log(klk.colors[0].color);
 				}
-			});
-			*/
-		
+			});*/
+
+
 			// Capitulo 12: Metodo attr y .click :)
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('#flow').click(function(event) {
 					$('#flow').attr({
 						width: '300'
@@ -469,25 +467,25 @@
 						src: uno
 					});
 				});
-			});
-			*/
-		
+			});*/
+
+
 			// Capitulo 13: Dimensiones
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('#flow').click(function(event) {
 					var h = $('#flow').height();
 					alert(h);
 					$('#flow').width(250).height(600);
 				});
-			});
-			*/
-		
+			});*/
+
+
 
 
 			// Capitulo 14: Efectos, ocultar, mostrar
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('#btnVer').click(function(event) {
 					//$('#flow').slideDown();
 					$('#flow').animate({
@@ -495,7 +493,7 @@
 					});
 					//$('.flow').slideDown(5000);
 					$('.flow').fadeIn(5000);
-					
+
 				});
 
 				$('#btnOcultar').click(function(event) {
@@ -506,15 +504,15 @@
 					$('#flow').animate({
 						height: 300
 					}, 5000);
-					
+
 				});
 
-			});
-			*/
-			
+			});*/
+
+
 			// Capitlo 15: Eventos de teclado
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('#input_text').keydown(function(event) {
 					$('#input_text').css('background-color', 'red');
 					$('#span_pul').text(i+=1);
@@ -533,13 +531,13 @@
 					//alert(len);
 					$('#span_letras').text(len);
 				});
-			});
-			*/
+			});*/
+
 
 			// Capitulo 16: Eventos del mouse
 			// https://api.jquery.com/category/events/mouse-events/
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('#icon_triste').mousedown(function(event) {
 					alert('klk');
 					$('#icon_triste').addClass('fa-smile').removeClass('fa-frown');
@@ -553,13 +551,13 @@
 					//alert('klk');
 				//	$('.saludo').text('Carlos Amores');
 				//});
-			});
-			*/
-		
+			});*/
+
+
 			// Capitulo 17: Metodo Data
 			// http://www.etnassoft.com/2011/03/26/jquery-data/
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('#colors li').each(function(index, val) {
 					$('#colors').data('index', index);
 					console.log($('#colors').data('index'));
@@ -568,12 +566,11 @@
 					$('#colors').data('value', val);
 					console.log($('#colors').data('value'));
 				});
-			});
-			*/
+			});*/
+
 
 			// Capitulo 18: Metodo animate
 			// http://api.jquery.com/animate/
-			/*
 			$(function(){
 				$('#left').click(function(event) {
 					$('.cubo').animate({left: '-=50px'}, 2000);
@@ -589,14 +586,13 @@
 				$('#down').click(function(event) {
 					$('.cubo').animate({top: '+=50px'}, 2000);
 				});
-				
 			});
-			*/
+
 
 			// Capitulo 19: Metodo animate parte 2
 			// http://api.jquery.com/animate/
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('body').keyup(function(event) {
 					if(event.keyCode == 37){
 						$('.cubo').animate({left: '-=50px'}, 'fast');
@@ -610,13 +606,13 @@
 						console.log('No ha presionado las teclas de direccion');
 					}
 				});
-			});
-			*/
+			});*/
+
 
 			// Capitulo 20: Velocidad animacion de las aplicaciones
 			// http://gsgd.co.uk/sandbox/jquery/easing/#example
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('body').keyup(function(event) {
 					if(event.keyCode == 37){
 						$('.cubo').animate({left: '-=50px'}, 'fast');
@@ -633,20 +629,20 @@
 
 				$('.cubo').click(function(event) {
 					$(this).animate({
-						height: ['+=100', 'easeOutBounce'], 
+						height: ['+=100', 'easeOutBounce'],
 						width: ['+=100', 'swing']
 					}, 3000);
 				});
 
-			});
-			*/
-		
+			});*/
+
+
 
 			// Capitulo 21: Eventos del scroll
 			// https://api.jquery.com/scroll/
 			// https://api.jquery.com/scrollTop/
-			/*
-			$(function(){
+
+			/*$(function(){
 
 				$('#volver-arriba').click(function() {
 					alert($(this).scrollTop() + " px");
@@ -654,7 +650,7 @@
 					$(this).animate({scrollTop: 0}, '700');
 					alert('Vuelvo arriba, no funciona esta m...');
 				});
-				
+
 				$(window).scroll(function(event) {
 					if ($(this).scrollTop() > 100) {
 						console.log('Scroll mayor de 100 pixeles');
@@ -670,30 +666,30 @@
 			        alert("Vuelvo arriba");
 			        $("#div__id__klk").animate({scrollTop: 0}, '700');
 			    });
-				
-			});
-			*/
-			
+
+			});*/
+
+
 
 			// Capitulo 22: Crear, copiar, mover y remover elementos
 			// http://api.jquery.com/append/  http://api.jquery.com/appendto/
 			// http://api.jquery.com/prepend/ http://api.jquery.com/prependto/
 			// https://api.jquery.com/clone/ https://api.jquery.com/remove/
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('#btn_exe_add').click(function(event) {
 					// Agrega elemento al final de la lista
 					$('ol').append('<li> New element </li>');
 					$('ol').append('Some text');
 
-					// Agrega al princioio de la lista 
+					// Agrega al princioio de la lista
 					$('ol').prepend('<li> First element </li>');
-					
+
 				});
 
 				$('#btn_exe_mv_down').click(function(event) {
 					// Primer elemento a la ultima
-					$('ol').append($('ol li:first'));					
+					$('ol').append($('ol li:first'));
 				});
 
 
@@ -712,16 +708,16 @@
 				$('#btn_exe_dlt').click(function(event) {
 					$('ol li:last').remove();
 				});
-			});
-			*/
+			});*/
+
 
 
 			// Capitulo 23.- Curso jQuery - Padres, Hijos, Hermanos de Elementos
-			// https://api.jquery.com/children/ 
+			// https://api.jquery.com/children/
 			// https://api.jquery.com/parent/
 			// https://api.jquery.com/siblings/
-			/*
-			$(function(){
+
+			/*$(function(){
 				var hijos = $('#padre_ol').children();
 				console.log(hijos);
 
@@ -733,12 +729,12 @@
 
 				var hermanos = $('.hijo_li').siblings().text();
 				console.log(hermanos);
-			});
-			*/
-		
+			});*/
+
+
 			// Capitulo 24 Creando elementos virtuales
-			/*
-			$(function(){
+
+			/*$(function(){
 
 				$('#btn_exe_create').click(function(event) {
 					var li = $('<li>');
@@ -753,29 +749,29 @@
 					});
 				});
 
-			});
-			*/
-		
+			});*/
+
+
 			// Capitulo 25 JSON parse
-			/*
-			$(function(){
+
+			/*$(function(){
 				var cad = '{"name": "Carlos", "lastname": "Amores", "edad":"20"}';
 				var obj = JSON.parse(cad);
 				console.log(obj.name);
 				console.log(obj.lastname);
 				console.log(obj.name + ' ' + obj.lastname + ' ' + obj.edad);
-			});
-			*/
+			});*/
+
 
 
 			// Capitulo 26: Ajax teórico
 			//Ajax: Asynchronous Javascript And Xml, permite crear app interactivas para el cliente, mientras mantiene conexion en segundo plano con el servidor de forma asyncrona, asi evitamos recargar una pagina. Mejor interatividad, velocidad y usbalidad de las app.
 			// Ajax devuelve siempre una respuesta, los datos podemos devolver en JSON o XML
-			
+
 
 			// Capitulo 27: Método Get en Ajax
-			/*
-			$(function(){
+
+			/*$(function(){
 				$.get('ejemplo.html', function(data){
 					console.log(data);
 					$('#h6_result').text(data)
@@ -785,13 +781,13 @@
 					console.log(data);
 					$('#h6_result_php').text(data)
 				});
-			});
-			*/
-			
-		
+			});*/
+
+
+
 			// Capitulo 28: Método POST
-			/*
-			$(function(){
+
+			/*$(function(){
 				$('#h5_28_input').click(function(event){
 					$.post('ejemplo.php', {
 						nombre: 'Carlos Amores',
@@ -800,13 +796,13 @@
 						console.log(data + ' - Estado: ' + status);
 					});
 				});
-			});
-			*/
-			
-		
+			});*/
+
+
+
 			// Capitulo 29: getJSON
-			/*
-			$(function(){
+
+			/*$(function(){
 				// https://api.jquery.com/jquery.getjson/
 				$('#h5_29_input').click(function(){
 					$.getJSON( "ejemplo.php",{
@@ -815,7 +811,7 @@
 					}, function(data) {
 						console.log( "success" );
 						$.each(data, function(index, val) {
-							console.log(index + " " + val);	
+							console.log(index + " " + val);
 						});
 					})
 						.done(function() {
@@ -828,12 +824,11 @@
 							console.log( "complete" );
 						});
 				});
-			});
-			*/
-		
+			});*/
+
+
 			// Capitulo 29: Ejemplo Ajax
-			
-			$(function(){
+			/*$(function(){
 				$('#h5_30_input').click(function(){
 
 					sumar($('#h5_input_val1').val(), $('#h5_input_val2').val());
@@ -867,21 +862,7 @@
 						});
 					}
 				});
-			});
-
-
-
-
-
-
-
-
-
-
-			
-			
-
-
+			});*/
 
 
 		</script>
