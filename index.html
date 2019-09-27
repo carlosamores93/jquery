@@ -24,7 +24,7 @@
 		</center>
 		<hr>
 
-		<center >
+		<center>
 			<h2> 1. Activacíon del método ready</h2>
 			<p id="carlos_amores"> Carlos Salvador Amores Martínez</p>
 			<h2 class='saludo_klk'> Klk manin </h2>
@@ -35,7 +35,7 @@
 		<hr>
 
 		<center id='center__id__video'>
-			<h2 class="saludo"> 2. Video scroll</h2>
+			<h2> 2. Video scroll</h2>
 			<iframe class='video_scroll' id='video_video' width="560" height="315" src="https://www.youtube.com/embed/Ro18BjrfFg4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<br>
 			<br>
@@ -48,7 +48,19 @@
 			<h2> 6. Attr(get/set), rename(class/id)</h2>
 			<p class='p_carlos_amores'> Carlos Amores</p>
 			<span class='span_salvador'>Salvador Martinez</span>
-			<p class='csam'>Salvador Martinez</p>
+			<p class='p_csam'>Camila Leonor</p>
+			<button class="cap_6_button" > Cambiar atributos, class e ids </button>
+		</center>
+		<hr>
+
+
+		<center>
+			<h2> 7. Método CSS </h2>
+			<p class='p_saludo_7'> Hola que tal? </p>
+			<div class='div_cap_7'>
+				<p class='p_csam'>Muy bien</p>
+			</div>
+			<button class="cap_7_button" > Cambiar estilos CSS </button>
 		</center>
 		<hr>
 
@@ -254,8 +266,9 @@
 		<script src='https://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js'></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 		<script>
+
 			// 1. Formas de activar el método ready
-			$(function(){
+			/*$(function(){
 				alert('Metodo ready1');
 			});
 			$().ready(function(){
@@ -271,7 +284,7 @@
 			});
 			$('h1').ready(function($) {
 				alert('Metodo ready4, H1');
-			});
+			});*/
 
 
 
@@ -297,37 +310,51 @@
 				console.log('NOOO Hemos cargado el archivo');
 			});
 
-
 			// Capitulo 6
-			console.log('CAP 6 INI');
-			var p_carlos = $('.p_carlos_amores').html();
-			console.log(p_carlos);
-			// Attr: obtener y asignar un valor
-			var class_attr = $('.span_salvador').attr('class');
-			console.log(class_attr);
-			// Attr: renombramos clase
-			var class_attr_new = $('.span_salvador').attr('class', 'salvador_carlos');
-			console.log(class_attr_new);
-			// Attr: id
-			var new_id = $('p.csam').attr('id', 'csam_id');
-			console.log(new_id);
-			console.log('CAP 6 FIN');
+			$(document).ready(function($) {
+				$('.cap_6_button').click(function(event) {
+					console.log('CAP 6 INI');
+					var p_carlos = $('.p_carlos_amores').html();
+					console.log(p_carlos);
+					// Attr: obtener y asignar un valor
+					var class_attr = $('.span_salvador').attr('class');
+					console.log(class_attr);
+					// Attr: renombramos clase
+					var class_attr_new = $('.span_salvador').attr('class', 'salvador_carlos');
+					console.log(class_attr_new);
+					// Attr: id
+					var new_id = $('p.p_csam').attr('id', 'csam_id');
+					console.log(new_id);
+
+
+					var text1 = $('.p_csam').text();
+					var text2 = $('.salvador_carlos').text();
+					$('.p_csam').text(text2);
+					$('.salvador_carlos').text(text1);
+					console.log('CAP 6 FIN');
+
+				});
+			});
+
 
 
 
 			// Capitulo 7 metodos css
+			$(document).ready(function($) {
+				$('.cap_7_button').click(function(event) {
+					$('.p_saludo_7').css({
+						'border': '1px solid black',
+						'color': 'red',
+						'text-align': 'center'
+					});
 
-			/*$('.saludo').css({
-				'border': '1px solid black',
-				'color': 'red',
-				'text-align': 'center'
+					$('.div_cap_7').css({
+						'border': '1px solid blue',
+						'color': 'blue',
+						'text-align': 'center'
+					});
+				});
 			});
-
-			$('div').css({
-				'border': '1px solid blue',
-				'color': 'blue',
-				'text-align': 'center'
-			});*/
 
 
 
