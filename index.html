@@ -13,6 +13,17 @@
 				width: 50px;
 				height: 50px;
 			}
+			table, th, td {
+			  border: 1px solid black;
+			  border-collapse: collapse;
+			}
+			th, td {
+			  padding: 5px;
+			  text-align: center;
+			}
+			.p__parrafo_class{
+				color: blue;
+			}
 		</style>
 
 		<center id='center__id__video'>
@@ -74,6 +85,19 @@
 			<button class="cap_9_button" > Hide/Show </button>
 		</center>
 		<hr>
+
+
+		<center>
+			<h2> 10. Each/For </h2>
+			<p id='id_parrafo_10' class='p_10_parrafo'> Podemos ver el resultado en la consola</p>
+			<div class="div_class_10">
+				<table style="width:100%" class='table_mult'>
+				</table>
+			</div>
+			<button class="cap_10_button" > Ejecutar FOR </button>
+		</center>
+		<hr>
+
 
 
 		<center>
@@ -364,19 +388,14 @@
 
 			// Capitulo 8: Manejo de clases
 			$(document).ready(function($) {
-				$('#id_parrafo_8').css({
-					//'border': '1px solid black',
-					'color': 'red',
-					'text-align': 'center'
-				});
 				$('.cap_8_button').click(function(event) {
 					// hasClass return bool
 					if($('#id_parrafo_8').hasClass('p__parrafo_class')){
-						alert('Tiene la clase p__parrafo_class');
+						console.log('Tiene la clase p__parrafo_class');
 						// Voy a borrar la clase
 						$('#id_parrafo_8').removeClass('p__parrafo_class');
 					}else{
-						alert('No tiene la clase');
+						console.log('No tiene la clase');
 						$('#id_parrafo_8').addClass('p__parrafo_class')
 					}
 				});
@@ -386,11 +405,7 @@
 			// Capitulo 9: Show and hide
 			// Nos permite mostrar/ocultar elementos
 			$(document).ready(function($) {
-				$('#parrafo').css({
-					//'border': '1px solid black',
-					'color': 'green',
-					'text-align': 'center'
-				});
+
 				$('.cap_9_button').click(function(event) {
 					if($('#id_parrafo_9').hasClass('p_9_parrafo')){
 						// Tiempo que tarda en  mostrar el contenido
@@ -407,22 +422,43 @@
 
 
 			// Capitulo 10: Iterar for foreach
+			$(function(){
+				$('#id_parrafo_10').hide();
+				$('.cap_10_button').click(function(event) {
+					//var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+					var numbers = [1,2,3,4,5,6,7,8,9,10];
+					var cabecera="<tr>";
+					console.log('Each');
+					var contenido="";
+					$.each(numbers, function(index, val) {
+						 // iterate through array or object
+						console.log('1º Each: ' + index + ':'+  val);
+						if(val == 1){
+							cabecera += '<th></th><th>' + val +'</th>';
+						}else{
+							cabecera += '<th>' + val +'</th>';
+						}
+						var item="<tr>";
+						item += '<td>' + val+ '</td>';
+						$.each(numbers, function(index2, val2) {
+							 // iterate through array or object
+							console.log('2º Each anidado: ' + index2 + ':'+  val2);
+							item += '<td>' + val * val2 +'</td>';
+						});
+						item += '</tr>';
+						contenido += item;
+					});
+					$('.table_mult').append(cabecera+"</tr>");
+					$('.table_mult').append(contenido);
 
-			/*$(function(){
-				var numbers = [1,2,3,4,5,6,7,8,9,10];
-
-				$.each(numbers, function(index, val) {
-					 // iterate through array or object
-					console.log(index + ':'+  val);
+					console.log('For , size:' + numbers.length);
+					for (var i = 0; i < numbers.length; i++) {
+						console.log(numbers[i])
+					}
+					$('#id_parrafo_10').show(300);
+					$('.cap_10_button').attr("disabled", true);
 				});
-
-
-				console.log('FOR!!!');
-				console.log('Size' + numbers.length);
-				for (var i = 0; i < numbers.length; i++) {
-					console.log(numbers[i])
-				}
-			});*/
+			});
 
 
 			// Capitulo 11: iterar elementos con for of
