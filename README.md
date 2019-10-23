@@ -1,2 +1,2 @@
 # jquery
-Curso jQuery  de codigo Facilito
+Cursos jQuery
