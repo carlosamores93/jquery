@@ -7,10 +7,6 @@
 	<body id='body__id'>
 
 		<style type="text/css" media="screen">
-			.ocultar{
-				display: none;
-			}
-
 			.cubo{
 				position: absolute;
 				background-color: black;
@@ -64,6 +60,21 @@
 		</center>
 		<hr>
 
+		<center>
+			<h2> 8. hasClass, removeClass, addClass </h2>
+			<p id='id_parrafo_8' class='p__parrafo_class'> Curso Jquery</p>
+			<button class="cap_8_button" > has/remove/add class with jQuery </button>
+		</center>
+		<hr>
+
+
+		<center>
+			<h2> 9. Hide, show </h2>
+			<p id='id_parrafo_9' class='p_9_parrafo'> Parrafo a ser mostrado u ocultar</p>
+			<button class="cap_9_button" > Hide/Show </button>
+		</center>
+		<hr>
+
 
 		<center>
 			<h2> 18. Método animate</h2>
@@ -101,13 +112,6 @@
 		</label>
 
 
-
-
-
-
-
-
-		<p id='parrafo' class='p__parrafo ocultar'> Curso Jqueryyyyyyy</p>
 
 
 		<div>
@@ -359,44 +363,46 @@
 
 
 			// Capitulo 8: Manejo de clases
-
-			/*$('#parrafo').css({
-				'border': '1px solid black',
-				'color': 'red',
-				'text-align': 'center'
+			$(document).ready(function($) {
+				$('#id_parrafo_8').css({
+					//'border': '1px solid black',
+					'color': 'red',
+					'text-align': 'center'
+				});
+				$('.cap_8_button').click(function(event) {
+					// hasClass return bool
+					if($('#id_parrafo_8').hasClass('p__parrafo_class')){
+						alert('Tiene la clase p__parrafo_class');
+						// Voy a borrar la clase
+						$('#id_parrafo_8').removeClass('p__parrafo_class');
+					}else{
+						alert('No tiene la clase');
+						$('#id_parrafo_8').addClass('p__parrafo_class')
+					}
+				});
 			});
-
-			// hasClass return bool
-			if($('#parrafo').hasClass('p__parrafoo')){
-				alert('Tiene la clase p__parrafo');
-
-				// Voy a borrar la clase
-				$('#parrafo').removeClass('p__parrafo');
-
-			}else{
-				alert('No tiene la clase');
-				$('#parrafo').addClass('p__parrafo_p')
-			}*/
 
 
 			// Capitulo 9: Show and hide
 			// Nos permite mostrar/ocultar elementos
-
-			/*$('#parrafo').css({
-				'border': '1px solid black',
-				'color': 'red',
-				'text-align': 'center'
+			$(document).ready(function($) {
+				$('#parrafo').css({
+					//'border': '1px solid black',
+					'color': 'green',
+					'text-align': 'center'
+				});
+				$('.cap_9_button').click(function(event) {
+					if($('#id_parrafo_9').hasClass('p_9_parrafo')){
+						// Tiempo que tarda en  mostrar el contenido
+						$('#id_parrafo_9').hide(5000);
+						$('#id_parrafo_9').removeClass('p_9_parrafo');
+					}else{
+						//alert('No tiene la clase, oculto divs');
+						$('#id_parrafo_9').show(3000);
+						$('#id_parrafo_9').addClass('p_9_parrafo')
+					}
+				});
 			});
-			if($('#parrafo').hasClass('p__parrafo__')){
-				alert('Tiene la clase p__parrafo');
-
-				// Tiempo que tarda en  mostrar el contenido
-				$('#parrafo').show(3000);
-
-			}else{
-				alert('No tiene la clase, oculto divs');
-				$('div').hide(5000);
-			}*/
 
 
 
