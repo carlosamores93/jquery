@@ -99,6 +99,13 @@
 		<hr>
 
 
+		<center>
+			<h2> 11. Each/For </h2>
+			<p>Revisar en consola</p>
+		</center>
+		<hr>
+
+
 
 		<center>
 			<h2> 18. Método animate</h2>
@@ -286,15 +293,20 @@
 
 
 
-		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
+		<!-- <script src='https://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js'></script> -->
+		<!-- <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script> -->
+		<!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+		<script src="js/jquery-3.4.1.js"></script>
 		<script src="js/videoscroll.js"></script>
-		<!--
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-		-->
-		<script src='https://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js'></script>
-		<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
-		<script>
+		<script src="js/eje06.js"></script>
+		<script src="js/eje07.js"></script>
+		<script src="js/eje08.js"></script>
+		<script src="js/eje09.js"></script>
+		<script src="js/eje10.js"></script>
+		<script src="js/eje11.js"></script>
 
+		<script>
 			// 1. Formas de activar el método ready
 			/*$(function(){
 				alert('Metodo ready1');
@@ -314,8 +326,6 @@
 				alert('Metodo ready4, H1');
 			});*/
 
-
-
 			// 2. Videoscroll
 			$(function(){
 				$('.video_scroll').vscroll();
@@ -325,10 +335,7 @@
 					$("#video_del").remove();
 					$("#center__id__video").remove();
 				});
-
 			});
-
-
 
 			// Manejo de errores
 			// Cuando hemos cargado el documento ... hacemos .. sino...
@@ -337,161 +344,6 @@
 			}).catch(function(){
 				console.log('NOOO Hemos cargado el archivo');
 			});
-
-			// Capitulo 6
-			$(document).ready(function($) {
-				$('.cap_6_button').click(function(event) {
-					console.log('CAP 6 INI');
-					var p_carlos = $('.p_carlos_amores').html();
-					console.log(p_carlos);
-					// Attr: obtener y asignar un valor
-					var class_attr = $('.span_salvador').attr('class');
-					console.log(class_attr);
-					// Attr: renombramos clase
-					var class_attr_new = $('.span_salvador').attr('class', 'salvador_carlos');
-					console.log(class_attr_new);
-					// Attr: id
-					var new_id = $('p.p_csam').attr('id', 'csam_id');
-					console.log(new_id);
-
-
-					var text1 = $('.p_csam').text();
-					var text2 = $('.salvador_carlos').text();
-					$('.p_csam').text(text2);
-					$('.salvador_carlos').text(text1);
-					console.log('CAP 6 FIN');
-
-				});
-			});
-
-
-
-
-			// Capitulo 7 metodos css
-			$(document).ready(function($) {
-				$('.cap_7_button').click(function(event) {
-					$('.p_saludo_7').css({
-						'border': '1px solid black',
-						'color': 'red',
-						'text-align': 'center'
-					});
-
-					$('.div_cap_7').css({
-						'border': '1px solid blue',
-						'color': 'blue',
-						'text-align': 'center'
-					});
-				});
-			});
-
-
-
-			// Capitulo 8: Manejo de clases
-			$(document).ready(function($) {
-				$('.cap_8_button').click(function(event) {
-					// hasClass return bool
-					if($('#id_parrafo_8').hasClass('p__parrafo_class')){
-						console.log('Tiene la clase p__parrafo_class');
-						// Voy a borrar la clase
-						$('#id_parrafo_8').removeClass('p__parrafo_class');
-					}else{
-						console.log('No tiene la clase');
-						$('#id_parrafo_8').addClass('p__parrafo_class')
-					}
-				});
-			});
-
-
-			// Capitulo 9: Show and hide
-			// Nos permite mostrar/ocultar elementos
-			$(document).ready(function($) {
-
-				$('.cap_9_button').click(function(event) {
-					if($('#id_parrafo_9').hasClass('p_9_parrafo')){
-						// Tiempo que tarda en  mostrar el contenido
-						$('#id_parrafo_9').hide(5000);
-						$('#id_parrafo_9').removeClass('p_9_parrafo');
-					}else{
-						//alert('No tiene la clase, oculto divs');
-						$('#id_parrafo_9').show(3000);
-						$('#id_parrafo_9').addClass('p_9_parrafo')
-					}
-				});
-			});
-
-
-
-			// Capitulo 10: Iterar for foreach
-			$(function(){
-				$('#id_parrafo_10').hide();
-				$('.cap_10_button').click(function(event) {
-					//var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-					var numbers = [1,2,3,4,5,6,7,8,9,10];
-					var cabecera="<tr>";
-					console.log('Each');
-					var contenido="";
-					$.each(numbers, function(index, val) {
-						 // iterate through array or object
-						console.log('1º Each: ' + index + ':'+  val);
-						if(val == 1){
-							cabecera += '<th></th><th>' + val +'</th>';
-						}else{
-							cabecera += '<th>' + val +'</th>';
-						}
-						var item="<tr>";
-						item += '<td>' + val+ '</td>';
-						$.each(numbers, function(index2, val2) {
-							 // iterate through array or object
-							console.log('2º Each anidado: ' + index2 + ':'+  val2);
-							item += '<td>' + val * val2 +'</td>';
-						});
-						item += '</tr>';
-						contenido += item;
-					});
-					$('.table_mult').append(cabecera+"</tr>");
-					$('.table_mult').append(contenido);
-
-					console.log('For , size:' + numbers.length);
-					for (var i = 0; i < numbers.length; i++) {
-						console.log(numbers[i])
-					}
-					$('#id_parrafo_10').show(300);
-					$('.cap_10_button').attr("disabled", true);
-				});
-			});
-
-
-			// Capitulo 11: iterar elementos con for of
-
-			/*$(function(){
-				var numbers = [1,2,3,4,5,6,7,8,9,10];
-				var num;
-				for(let num of numbers) {
-					console.log(num);
-				}
-				console.log("*****************************");
-				var klks = [{
-					'colors':[
-						{
-							'color' : 'red',
-							'hexValue' : '#f00'
-						},
-						{
-							'color' : 'green',
-							'hexValue' : '#0f0'
-						},
-						{
-							'color' : 'blue',
-							'hexValue' : '#00f'
-						}
-					]
-				}];
-				var klk;
-				for(let klk of klks) {
-					console.log(klk);
-					console.log(klk.colors[0].color);
-				}
-			});*/
 
 
 			// Capitulo 12: Metodo attr y .click :)
