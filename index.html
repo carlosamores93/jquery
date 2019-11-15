@@ -220,7 +220,7 @@
 
 		<center>
 			<h2 id='h2__22'> Capitulo 22: Crear, copiar, mover y remover </h2>
-			<ol>
+			<ol class="ol_class_crud">
 				<li> Elemento 1 </li>
 				<li> Elemento 2 </li>
 				<li> Elemento 3 </li>
@@ -336,6 +336,7 @@
 		<script src="js/eje19.js"></script>
 		<script src="js/eje20.js"></script>
 		<script src="js/eje21.js"></script>
+		<script src="js/eje22.js"></script>
 
 		<script>
 			// 1. Formas de activar el método ready
@@ -376,46 +377,6 @@
 			}).catch(function(){
 				console.log('NOOO Hemos cargado el archivo');
 			});
-
-			// Capitulo 22: Crear, copiar, mover y remover elementos
-			// http://api.jquery.com/append/  http://api.jquery.com/appendto/
-			// http://api.jquery.com/prepend/ http://api.jquery.com/prependto/
-			// https://api.jquery.com/clone/ https://api.jquery.com/remove/
-
-			/*$(function(){
-				$('#btn_exe_add').click(function(event) {
-					// Agrega elemento al final de la lista
-					$('ol').append('<li> New element </li>');
-					$('ol').append('Some text');
-
-					// Agrega al princioio de la lista
-					$('ol').prepend('<li> First element </li>');
-
-				});
-
-				$('#btn_exe_mv_down').click(function(event) {
-					// Primer elemento a la ultima
-					$('ol').append($('ol li:first'));
-				});
-
-
-				$('#btn_exe_mv_up').click(function(event) {
-					// Ultimo elelento en la primera
-					$('ol').prepend($('ol li:last'));
-				});
-
-				$('#btn_exe_clone').click(function(event) {
-					var clone = $('ol li:last').text();
-					console.log(clone);
-					$('#h2__22').append(clone);
-				});
-
-
-				$('#btn_exe_dlt').click(function(event) {
-					$('ol li:last').remove();
-				});
-			});*/
-
 
 
 			// Capitulo 23.- Curso jQuery - Padres, Hijos, Hermanos de Elementos
