@@ -166,6 +166,7 @@
 		<center>
 			<h2> 17. Method Data </h2>
 			<div>
+				<p> Ver en consola</p>
 				<ul id="ul_colors">
 					<li>red</li>
 					<li>blue</li>
@@ -340,6 +341,7 @@
 		<script src="js/eje15.js"></script>
 		<script src="js/eje16.js"></script>
 		<script src="js/eje17.js"></script>
+		<script src="js/eje18.js"></script>
 
 		<script>
 			// 1. Formas de activar el método ready
@@ -378,31 +380,6 @@
 				console.log('Hemos cargado el archivo');
 			}).catch(function(){
 				console.log('NOOO Hemos cargado el archivo');
-			});
-
-			
-
-
-			
-
-
-			// Capitulo 18: Metodo animate
-			// http://api.jquery.com/animate/
-			$(function(){
-				$('#left').click(function(event) {
-					$('.cubo').animate({left: '-=50px'}, 2000);
-				});
-				$('#right').click(function(event) {
-					$('.cubo').animate({left: '+=50px'}, 2000);
-				});
-
-				$('#up').click(function(event) {
-					$('.cubo').animate({top: '-=50px'}, 2000);
-				});
-
-				$('#down').click(function(event) {
-					$('.cubo').animate({top: '+=50px'}, 2000);
-				});
 			});
 
 
