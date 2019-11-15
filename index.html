@@ -258,10 +258,17 @@
 		</center>
 		<hr>
 
+		<center>
+			<h2> 26. Ajax teórico </h2>
+			<p> <b>Ajax:</b> Asynchronous Javascript And Xml, permite crear app interactivas para el cliente, mientras mantiene conexion en segundo plano con el servidor de forma asyncrona, asi evitamos recargar una pagina. Mejor interatividad, velocidad y usbalidad de las app.</p>
+			<p>Ajax devuelve siempre una respuesta, los datos podemos devolver en JSON o XML</p>
+		</center>
+		<hr>
+
 
 		<center>
 			<h2 id='h2__27'> 27.- Método Get en AJAX </h2>
-			<h6 id="h6_result"> </h6>
+			<h6 id="h6_result_html"> </h6>
 			<h6 id="h6_result_php"> </h6>
 		</center>
 
@@ -316,6 +323,8 @@
 		<script src="js/eje23.js"></script>
 		<script src="js/eje24.js"></script>
 		<script src="js/eje25.js"></script>
+		<script src="js/eje27.js"></script>
+		<script src="js/eje30.js"></script>
 		<script>
 			// 1. Formas de activar el método ready
 			/*
@@ -355,28 +364,6 @@
 			}).catch(function(){
 				console.log('NOOO Hemos cargado el archivo');
 			});
-
-
-
-			// Capitulo 26: Ajax teórico
-			//Ajax: Asynchronous Javascript And Xml, permite crear app interactivas para el cliente, mientras mantiene conexion en segundo plano con el servidor de forma asyncrona, asi evitamos recargar una pagina. Mejor interatividad, velocidad y usbalidad de las app.
-			// Ajax devuelve siempre una respuesta, los datos podemos devolver en JSON o XML
-
-
-			// Capitulo 27: Método Get en Ajax
-
-			/*$(function(){
-				$.get('ejemplo.html', function(data){
-					console.log(data);
-					$('#h6_result').text(data)
-				});
-
-				$.get('ejemplo.php', {nombre: 'Carlos Amores'}, function(data){
-					console.log(data);
-					$('#h6_result_php').text(data)
-				});
-			});*/
-
 
 
 			// Capitulo 28: Método POST
@@ -420,43 +407,6 @@
 				});
 			});*/
 
-
-			// Capitulo 29: Ejemplo Ajax
-			/*$(function(){
-				$('#h2_30_input').click(function(){
-
-					sumar($('#h2_input_val1').val(), $('#h2_input_val2').val());
-
-
-					function sumar(num1, num2){
-						var parametros = {
-							'val1': num1,
-							'val2': num2
-						};
-						$.ajax({
-							url: 'suma.php',
-							//type: 'default GET (Other values: POST)',
-							type: 'post',
-							//dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-							data: parametros,
-							beforeSend:function(){
-								console.log('Procesando...');
-							}
-						})
-						.done(function(data) {
-							console.log("success");
-							console.log(data);
-							$('#h6_result_30').text(data)
-						})
-						.fail(function() {
-							console.log("error");
-						})
-						.always(function() {
-							console.log("complete");
-						});
-					}
-				});
-			});*/
 		</script>
 	</body>
 </html>
