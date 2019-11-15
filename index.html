@@ -201,46 +201,25 @@
 		</center>
 		<hr>
 
-
-
-
-		<div>
-			Y entonces...
-		</div>
-
-
-
-		<!-- Boton para volver a la parte de arriba -->
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 		<center>
+			<h2> 21. Eventos del scroll</h2>
+			<div style="border:1px solid black;width:100px;height:150px;overflow:auto" id='div__id__klk'>
+			This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</div><br>
+
+			<button id='button__id'>Return the vertical position of the scrollbar</button>
+			<p>Move the scrollbar down and click the button again.</p>
 			<button id="volver-arriba"> Volver arriba </button>
 		</center>
+		<hr>
 
 
 
-
-
-
-
-
-		<div style="border:1px solid black;width:100px;height:150px;overflow:auto" id='div__id__klk'>
-		This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</div><br>
-
-		<button id='button__id'>Return the vertical position of the scrollbar</button>
-		<p>Move the scrollbar down and click the button again.</p>
 
 
 
 
 		<center>
-			<h5 id='h5__22'> Capitulo 22: Crear, copiar, mover y remover </h5>
+			<h2 id='h2__22'> Capitulo 22: Crear, copiar, mover y remover </h2>
 			<ol>
 				<li> Elemento 1 </li>
 				<li> Elemento 2 </li>
@@ -265,7 +244,7 @@
 
 
 		<center>
-			<h5 id='h5__23'> 23.- Curso jQuery - Padres, Hijos, Hermanos de Elementos </h5>
+			<h2 id='h2__23'> 23.- Curso jQuery - Padres, Hijos, Hermanos de Elementos </h2>
 
 			<ol id='padre_ol'>
 				<li> Elemento 1 </li>
@@ -280,7 +259,7 @@
 
 
 		<center>
-			<h5 id='h5__24'> 24.- Creado elementos virtuales </h5>
+			<h2 id='h2__24'> 24.- Creado elementos virtuales </h2>
 
 			<ol id='padre_ol_24'>
 				<li> Elemento 1 </li>
@@ -294,7 +273,7 @@
 
 
 		<center>
-			<h5 id='h5__27'> 27.- Método Get en AJAX </h5>
+			<h2 id='h2__27'> 27.- Método Get en AJAX </h2>
 
 			<h6 id="h6_result"> </h6>
 			<h6 id="h6_result_php"> </h6>
@@ -303,31 +282,31 @@
 
 
 		<center>
-			<h5 id='h5__28'> 28.- Método POST</h5>
+			<h2 id='h2__28'> 28.- Método POST</h2>
 
-			<input type="submit" value='Ejecutar' id='h5_28_input'>
-
-		</center>
-
-
-
-		<center>
-			<h5 id='h5__29'> 29.- Método getJSON</h5>
-
-			<input type="submit" id='h5_29_input' value='getJSON'>
+			<input type="submit" value='Ejecutar' id='h2_28_input'>
 
 		</center>
 
 
 
 		<center>
-			<h5 id='h5__30'> 30.- Ejemplo AJAX</h5>
+			<h2 id='h2__29'> 29.- Método getJSON</h2>
 
-			<input type="number" id='h5_input_val1'>
-			<input type="number" id='h5_input_val2'>
+			<input type="submit" id='h2_29_input' value='getJSON'>
+
+		</center>
+
+
+
+		<center>
+			<h2 id='h2__30'> 30.- Ejemplo AJAX</h2>
+
+			<input type="number" id='h2_input_val1'>
+			<input type="number" id='h2_input_val2'>
 			<h6 id="h6_result_30"> </h6>
 
-			<input type="submit" id='h5_30_input' value='Sumar'>
+			<input type="submit" id='h2_30_input' value='Sumar'>
 
 		</center>
 
@@ -356,6 +335,7 @@
 		<script src="js/eje18.js"></script>
 		<script src="js/eje19.js"></script>
 		<script src="js/eje20.js"></script>
+		<script src="js/eje21.js"></script>
 
 		<script>
 			// 1. Formas de activar el método ready
@@ -378,7 +358,6 @@
 					alert('Metodo ready4, H1');
 				});
 			*/
-
 			// 2. Videoscroll
 			$(function(){
 				$('.video_scroll').vscroll();
@@ -397,43 +376,6 @@
 			}).catch(function(){
 				console.log('NOOO Hemos cargado el archivo');
 			});
-
-			
-
-
-
-			// Capitulo 21: Eventos del scroll
-			// https://api.jquery.com/scroll/
-			// https://api.jquery.com/scrollTop/
-
-			/*$(function(){
-
-				$('#volver-arriba').click(function() {
-					alert($(this).scrollTop() + " px");
-					console.log('volver-arriba')
-					$(this).animate({scrollTop: 0}, '700');
-					alert('Vuelvo arriba, no funciona esta m...');
-				});
-
-				$(window).scroll(function(event) {
-					if ($(this).scrollTop() > 100) {
-						console.log('Scroll mayor de 100 pixeles');
-					}else{
-						console.log('Scroll MENOR de 100 pixeles');
-					}
-
-					console.log('Scroll del body' + $('#body__id').scrollTop() + " px");
-				});
-
-				$("#button__id").click(function(){
-			        alert($("#div__id__klk").scrollTop() + " px");
-			        alert("Vuelvo arriba");
-			        $("#div__id__klk").animate({scrollTop: 0}, '700');
-			    });
-
-			});*/
-
-
 
 			// Capitulo 22: Crear, copiar, mover y remover elementos
 			// http://api.jquery.com/append/  http://api.jquery.com/appendto/
@@ -465,7 +407,7 @@
 				$('#btn_exe_clone').click(function(event) {
 					var clone = $('ol li:last').text();
 					console.log(clone);
-					$('#h5__22').append(clone);
+					$('#h2__22').append(clone);
 				});
 
 
@@ -552,7 +494,7 @@
 			// Capitulo 28: Método POST
 
 			/*$(function(){
-				$('#h5_28_input').click(function(event){
+				$('#h2_28_input').click(function(event){
 					$.post('ejemplo.php', {
 						nombre: 'Carlos Amores',
 						metodo: 'POST'
@@ -568,7 +510,7 @@
 
 			/*$(function(){
 				// https://api.jquery.com/jquery.getjson/
-				$('#h5_29_input').click(function(){
+				$('#h2_29_input').click(function(){
 					$.getJSON( "ejemplo.php",{
 						nombre: 'Carlos',
 						metodo: 'Get'
@@ -593,9 +535,9 @@
 
 			// Capitulo 29: Ejemplo Ajax
 			/*$(function(){
-				$('#h5_30_input').click(function(){
+				$('#h2_30_input').click(function(){
 
-					sumar($('#h5_input_val1').val(), $('#h5_input_val2').val());
+					sumar($('#h2_input_val1').val(), $('#h2_input_val2').val());
 
 
 					function sumar(num1, num2){
@@ -627,10 +569,6 @@
 					}
 				});
 			});*/
-
-
 		</script>
-
-
 	</body>
 </html>
