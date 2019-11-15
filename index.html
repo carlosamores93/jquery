@@ -138,6 +138,22 @@
 		</center>
 		<hr>
 
+		<center>
+			<h2> 15. Eventos de teclado: keydown(), keypress(), keyup() </h2>
+			<div>
+				<input type="text" id="input_text" value="" placeholder="">
+				<br>
+				<label> Numero de pulsaciones del teclado:
+					<span id='span_pul'> 0 </span>
+				</label>
+				<br>
+				<label> Numero de letras:
+					<span id='span_letras'> 0 </span>
+				</label>
+			</div>
+		</center>
+		<hr>
+
 
 
 		<center>
@@ -164,18 +180,6 @@
 		<center>
 			<h2> <i class="far fa-frown" id='icon_triste'></i></h2>
 		</center>
-
-		<input type="text" id="input_text" value="" placeholder="">
-		<br>
-		<label> Numero de pulsaciones del teclado:
-			<span id='span_pul'> 0 </span>
-		</label>
-		<br>
-		<label> Numero de letras:
-			<span id='span_letras'> 0 </span>
-		</label>
-
-
 
 
 		<div>
@@ -324,6 +328,7 @@
 		<script src="js/eje12.js"></script>
 		<script src="js/eje13.js"></script>
 		<script src="js/eje14.js"></script>
+		<script src="js/eje15.js"></script>
 
 		<script>
 			// 1. Formas de activar el método ready
@@ -363,30 +368,6 @@
 			}).catch(function(){
 				console.log('NOOO Hemos cargado el archivo');
 			});
-
-
-			// Capitlo 15: Eventos de teclado
-			/*$(function(){
-				$('#input_text').keydown(function(event) {
-					$('#input_text').css('background-color', 'red');
-					$('#span_pul').text(i+=1);
-				});
-				var i = 0;
-				$('#input_text').keypress(function(event) {
-					$('span_pul').text(i+=1);
-				});
-
-				$('#input_text').keyup(function(event) {
-					$('#input_text').css('background-color', 'white');
-
-					var input = $('#input_text').val();
-					//alert(input);
-					var len = input.length;
-					//alert(len);
-					$('#span_letras').text(len);
-				});
-			});*/
-
 
 			// Capitulo 16: Eventos del mouse
 			// https://api.jquery.com/category/events/mouse-events/
