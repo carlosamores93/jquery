@@ -116,6 +116,28 @@
 		</center>
 		<hr>
 
+		<center>
+			<h2> 13. Method widt()/height()</h2>
+			<div>
+				<p>Mirar consola también</p>
+				<img class='img_barcelona_sc' src="img/bsc.png" alt="Barcelona SC">
+			</div>
+		</center>
+		<hr>
+
+		<center>
+			<h2> 14. Efectos: ocultar y mostrar</h2>
+			<div>
+				<img class='img_b_s_c' src="img/bsc.png" alt="Barcelona SC">
+				<img id='img_b_s_c' src="img/bsc.png" alt="Barcelona SC">
+				<p>
+					<button type="" id='btnVer'>Ver</button>
+					<button type="" id='btnOcultar'>Ocultar</button>
+				</p>
+			</div>
+		</center>
+		<hr>
+
 
 
 		<center>
@@ -161,8 +183,6 @@
 		</div>
 
 
-		<button type="" id='btnVer'>Ver</button>
-		<button type="" id='btnOcultar'>Ocultar</button>
 
 		<!-- Boton para volver a la parte de arriba -->
 		<br>
@@ -302,6 +322,8 @@
 		<script src="js/eje10.js"></script>
 		<script src="js/eje11.js"></script>
 		<script src="js/eje12.js"></script>
+		<script src="js/eje13.js"></script>
+		<script src="js/eje14.js"></script>
 
 		<script>
 			// 1. Formas de activar el método ready
@@ -343,50 +365,7 @@
 			});
 
 
-
-
-			// Capitulo 13: Dimensiones
-
-			/*$(function(){
-				$('#flow').click(function(event) {
-					var h = $('#flow').height();
-					alert(h);
-					$('#flow').width(250).height(600);
-				});
-			});*/
-
-
-
-
-			// Capitulo 14: Efectos, ocultar, mostrar
-
-			/*$(function(){
-				$('#btnVer').click(function(event) {
-					//$('#flow').slideDown();
-					$('#flow').animate({
-						height: 900
-					});
-					//$('.flow').slideDown(5000);
-					$('.flow').fadeIn(5000);
-
-				});
-
-				$('#btnOcultar').click(function(event) {
-					//$('#flow').slideUp();
-					//$('.flow').slideUp(5000);
-					$('.flow').fadeOut(5000);
-
-					$('#flow').animate({
-						height: 300
-					}, 5000);
-
-				});
-
-			});*/
-
-
 			// Capitlo 15: Eventos de teclado
-
 			/*$(function(){
 				$('#input_text').keydown(function(event) {
 					$('#input_text').css('background-color', 'red');
